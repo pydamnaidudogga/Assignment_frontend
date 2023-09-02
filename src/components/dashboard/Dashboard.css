@@ -1,0 +1,61 @@
+#dashboard{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    background-color: aqua;
+    width: 90%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: #ff00e66b;
+    box-shadow: 0.1px 0.1px 300px 70px #fb00ff63;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container a{
+    height: 40%;
+    width: 30%;
+
+}
+.box{
+    display: flex; 
+    background-color: white;
+    height: 100%;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box:hover{
+    cursor: pointer;
+    background-color: lightgreen;
+    box-shadow: 0.1px 0.1px 10px 1px lightgreen;
+}
+
+.box h3{
+    color: lightslategrey;
+}
+
+@media screen and (max-width:500px){
+
+    .container{
+        padding: 10px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .box{
+        width: 90%;
+    }
+    
+}
