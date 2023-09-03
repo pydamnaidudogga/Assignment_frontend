@@ -14,12 +14,13 @@ function Quotes() {
 
             try {
 
-
-                const response = await fetch(`http://localhost:8000/quotes`, {
+                const token = localStorage.getItem('authToken')
+                const response = await fetch(`https://assignment-backend-qu8p.onrender.com/quotes`, {
                 method: 'GET',
                 credentials: 'include', // This includes cookies in the request
                 headers: {
-                  'Content-Type': 'application/json'
+                  'Content-Type': 'application/json',
+                  'authorization': token
                 },
              
               });

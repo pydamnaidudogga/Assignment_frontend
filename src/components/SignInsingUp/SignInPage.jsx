@@ -1,21 +1,17 @@
 
-import { useEffect } from 'react';
+
 import './SignInSignUp.css'
 import { Navigate } from 'react-router-dom';
 
 function SignInPage(props) {
     const handleLogin = async ()=>{
 
-        window.open('http://localhost:8000/auth/google', '_self');
+        window.open('https://assignment-backend-qu8p.onrender.com/auth/google', '_self');
 
     }
   
 
-   useEffect(()=>{
-    if(props.isLogin){
-      // Navigate('/dashboard');
-    }
-   })
+  
 
 
 

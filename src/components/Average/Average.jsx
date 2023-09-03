@@ -14,19 +14,20 @@ function Average() {
 
 
             try {
+                const token = localStorage.getItem('authToken');
 
-
-                const response = await fetch(`http://localhost:8000/average`, {
+                const response = await fetch(`https://assignment-backend-qu8p.onrender.com/average`, {
                 method: 'GET',
                 credentials: 'include', // This includes cookies in the request
                 headers: {
-                  'Content-Type': 'application/json'
+                  'Content-Type': 'application/json',
+                  'authorization': token
                 },
              
               });
                 const data = await response.json();
                 setLoading(false);
-                console.log(data);
+                
                 if(response.ok){
                    setData(data.data);
                    
@@ -62,7 +63,7 @@ function Average() {
         
           <li key={index}>
             <div className='price-div' >
-                <span> Average Buy Proce : {item.average_buy_price} </span> 
+                <span> Average Buy Price : {item.average_buy_price} </span> 
                 <span> Average Sell Price : {item.average_sell_price}</span>
             </div>     
             
