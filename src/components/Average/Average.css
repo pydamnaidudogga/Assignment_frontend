@@ -1,0 +1,40 @@
+#listPage{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #00fdff5c 0%, #ca00ff45 50%, #0000ff4f 100%);
+
+}
+
+#listPage ul{
+    padding-top: 100px;
+    list-style-type: none;
+    /* width: 100%; */
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#listPage ul li{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-around;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #7fffd430;
+}
+
+.source-div{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+}
+
+.price-div{
+    display: flex;
+    justify-content: space-between;
+}
